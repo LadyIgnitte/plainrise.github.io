@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plainrise</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+      color: white;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 16px;
+      box-shadow: 0 0 20px rgba(63, 160, 255, 0.1);
+      overflow-y: auto;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    h1 span {
+      color: #3fa0ff;
+    }
+
+    .highlight-block {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 1rem 1.25rem;
+      border-left: 4px solid #3fa0ff;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      opacity: 0.95;
+      margin-top: 0.75rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .benefits {
+      margin-bottom: 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+      text-align: center;
+      border-bottom: 1px solid #333;
+      padding-bottom: 0.5rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+    }
+
+    ul li::before {
+      content: '✔';
+      color: #3fa0ff;
+      margin-right: 0.5rem;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    label {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      opacity: 0.9;
+    }
+
+    input, select, button {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+    }
+
+    input, select {
+      background: #1a1a1a;
+      color: white;
+      border: 1px solid #333;
+    }
+
+    input:focus, select:focus {
+      border-color: #3fa0ff;
+      outline: none;
+    }
+
+    button {
+      background: linear-gradient(90deg, #0070f3, #0056c1);
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media screen and (max-width: 480px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <h1>Cansado de estar cercado por quem <span>não te impulsiona?</span></h1>
+    <div class="highlight-block">
+      Conheça a Plainrise —<br> a rede de networking para quem quer crescer de verdade.
+    </div>
+
+    <section class="benefits">
+      <h2>Por que entrar na Plainrise?</h2>
+      <ul>
+        <li>Conexões inteligentes com pessoas que somam</li>
+        <li>Curadoria de membros qualificados</li>
+        <li>Eventos online e presenciais exclusivos</li>
+        <li>Oportunidades reais de crescimento e negócio</li>
+        <li>Suporte e visibilidade dentro da comunidade</li>
+      </ul>
+    </section>
+
+    <form action="https://getform.io/f/bwnwekka" method="POST" class="form">
+      <div>
+        <label for="nome">Nome completo</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+      </div>
+      <div>
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required />
+      </div>
+      <div>
+        <label for="atuacao">Área de atuação</label>
+        <input type="text" id="atuacao" name="atuacao" placeholder="Ex: Marketing, Direito, Tecnologia" />
+      </div>
+      <div>
+        <label for="objetivo">O que você busca na Plainrise?</label>
+        <input type="text" id="objetivo" name="objetivo" placeholder="Networking, crescimento, visibilidade..." />
+      </div>
+      <div>
+        <label for="mensalidade">Quanto você estaria disposto a pagar por mês?</label>
+        <select id="mensalidade" name="mensalidade" required>
+          <option value="" disabled selected>Selecione uma opção</option>
+          <option value="0">Nada — quero uma versão gratuita</option>
+          <option value="10">Até R$10</option>
+          <option value="30">Até R$30</option>
+          <option value="50">Até R$50</option>
+          <option value="100">Até R$100</option>
+          <option value="150+">Acima de R$150</option>
+        </select>
+      </div>
+      <button type="submit">Quero entrar</button>
+    </form>
+  </main>
+</body>
+</html>
