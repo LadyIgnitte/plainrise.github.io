@@ -89,3 +89,11 @@ button[type="submit"] {
   font-size: 0.9rem;
   text-align: center;
 }
+
+.section-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 3rem auto;
+  width: 80%;
+  border: none;
+}
