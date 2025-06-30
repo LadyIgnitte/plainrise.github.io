@@ -10,11 +10,15 @@
 <body>
   <main class="container">
     <h1>Cansado de estar cercado por quem <span>não te impulsiona?</span></h1>
+
     <div class="highlight-block">
       <strong>Plainrise</strong>: uma comunidade exclusiva para quem quer crescer — de verdade.<br>
       Conecte-se com quem pensa grande e constrói o futuro.
     </div>
+
     <button class="cta-button" onclick="scrollToForm()">Quero entrar</button>
+
+    <hr class="section-divider">
 
     <section class="benefits">
       <h2>Por que entrar na Plainrise?</h2>
@@ -27,14 +31,19 @@
       </ul>
     </section>
 
+    <hr class="section-divider">
+
     <div class="testimonial">
-      “Eu achava que já tinha visto de tudo... até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”<br> — <strong>Lucas M., Empreendedor Serial</strong>
+      “Eu achava que já tinha visto de tudo… até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”<br> 
+      – <strong>Lucas M., Empreendedor Serial</strong>
     </div>
 
-    <div id="timer">⏳ Faltam <span id="countdown">15</span> vagas</div>
+    <hr class="section-divider">
+
+    <div class="timer">⚡ Faltam <span id="countdown">15</span> vagas</div>
     <div class="urgency">⚡ Formulário aberto por tempo limitado. Garanta seu lugar agora.</div>
 
-    <form id="lead-form" action="https://getform.io/f/bwnwekka" method="POST" class="form" onsubmit="validateForm(event)">
+    <form id="lead-form" action="https://getform.io/f/bwmwekka" method="POST" class="form" onsubmit="validateForm(event)">
       <div>
         <label for="nome">Nome completo</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
@@ -67,6 +76,7 @@
       <div id="form-error" class="error-message" style="display:none">Por favor, preencha todos os campos antes de enviar.</div>
     </form>
   </main>
+
   <script src="script.js"></script>
 </body>
 </html>
