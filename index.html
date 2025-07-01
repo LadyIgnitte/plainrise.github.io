@@ -2,136 +2,45 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Plainrise</title>
-  <style>
-    /* ========== BASE GLOBAL ========== */
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #0d1224;
-      color: #ffffff;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    h1, h2, h3, p {
-      margin: 0 0 20px 0;
-      line-height: 1.4;
-    }
-
-    button {
-      padding: 14px 24px;
-      font-size: 16px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(to right, #3a61ff, #74f2ce);
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 0 12px rgba(58, 97, 255, 0.4);
-    }
-
-    input, select {
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      width: 100%;
-      margin-bottom: 12px;
-    }
-
-    /* ========== RESPONSIVO: CELULAR ========== */
-    @media only screen and (max-width: 768px) {
-      html, body {
-        overflow-x: hidden;
-        width: 100%;
-        margin: 0;
-        padding: 0;
-      }
-
-      .mobile-fix {
-        padding-left: 16px;
-        padding-right: 16px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-      }
-
-      h1, h2, h3, p {
-        word-wrap: break-word;
-        hyphens: auto;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    <h1>Cansado de estar cercado por quem <span>não te impulsiona?</span></h1>
+    <p><strong>Plainrise:</strong> uma comunidade exclusiva para quem quer crescer — de verdade.</p>
+    <p>Conecte-se com quem pensa grande e constrói o futuro.</p>
 
-  <div class="container mobile-fix">
+    <button>Quero entrar</button>
 
-    <header>
-      <h1>Cansado de estar cercado por quem <span style="color:#74f2ce">não te impulsiona?</span></h1>
-      <p><strong>Plainrise:</strong> uma comunidade exclusiva para quem quer crescer — de verdade.<br>Conecte-se com quem pensa grande e constrói o futuro.</p>
-      <button>Quero entrar</button>
-    </header>
+    <h2>Por que entrar na Plainrise?</h2>
+    <ul style="text-align: left; margin-top: 20px;">
+      <li>🔗 Conexões inteligentes com pessoas que somam</li>
+      <li>🎯 Curadoria de membros qualificados</li>
+      <li>📅 Eventos online e presenciais exclusivos</li>
+      <li>📈 Oportunidades reais de crescimento e negócio</li>
+      <li>💬 Suporte e visibilidade dentro da comunidade</li>
+    </ul>
 
-    <main>
-      <h2>Por que entrar na Plainrise?</h2>
-      <ul>
-        <li>Conexões inteligentes com pessoas que somam</li>
-        <li>Curadoria de membros qualificados</li>
-        <li>Eventos online e presenciais exclusivos</li>
-        <li>Oportunidades reais de crescimento e negócio</li>
-        <li>Suporte e visibilidade dentro da comunidade</li>
-      </ul>
+    <blockquote style="font-style: italic; margin-top: 20px;">“Eu achava que já tinha visto de tudo… até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”<br> — <strong>Lucas M., Empreendedor Serial</strong></blockquote>
 
-      <blockquote>
-        <em>“Eu achava que já tinha visto de tudo… até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”</em><br>
-        — <strong>Lucas M., Empreendedor Serial</strong>
-      </blockquote>
+    <p>⚡ Faltam 13 vagas</p>
+    <p>⏳ Formulário aberto por <strong>tempo limitado</strong>. Garanta seu lugar agora.</p>
 
-      <p>⚡ Faltam 13 vagas</p>
-      <p>⚡ Formulário aberto por <strong>tempo limitado</strong>. Garanta seu lugar agora.</p>
-
-      <form>
-        <label>Nome completo<br />
-          <input type="text" placeholder="Seu nome" required />
-        </label><br />
-
-        <label>E-mail<br />
-          <input type="email" placeholder="Seu melhor e-mail" required />
-        </label><br />
-
-        <label>Área de atuação<br />
-          <input type="text" placeholder="Ex: Marketing, Direito, Tecno" required />
-        </label><br />
-
-        <label>O que você busca na Plainrise?<br />
-          <input type="text" placeholder="Networking, crescimento, visibilidade..." required />
-        </label><br />
-
-        <label>Quanto você estaria disposto a pagar por mês?<br />
-          <select required>
-            <option disabled selected>Selecione uma opção</option>
-            <option>R$50</option>
-            <option>R$100</option>
-            <option>R$200+</option>
-          </select>
-        </label><br />
-
-        <button type="submit">Quero entrar</button>
-      </form>
-    </main>
-
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu melhor e-mail" required />
+      <input type="text" placeholder="Ex: Marketing, Direito, Tecno" />
+      <input type="text" placeholder="Networking, crescimento, visibilidade..." />
+      <select required>
+        <option selected disabled>Selecione uma opção</option>
+        <option>R$49</option>
+        <option>R$97</option>
+        <option>R$197</option>
+      </select>
+      <button type="submit">Quero entrar</button>
+    </form>
   </div>
-
 </body>
 </html>
