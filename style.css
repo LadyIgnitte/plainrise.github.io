@@ -1,4 +1,4 @@
-/* ========== BASE GERAL ========== */
+/* ========== BASE GLOBAL ========== */
 * {
   box-sizing: border-box;
 }
@@ -20,6 +20,7 @@ body {
 
 h1, h2, h3, p {
   margin: 0 0 20px 0;
+  line-height: 1.4;
 }
 
 button {
@@ -33,27 +34,21 @@ button {
   box-shadow: 0 0 12px rgba(58, 97, 255, 0.4);
 }
 
-/* ========== RESPONSIVO (CELULAR) ========== */
+/* ========== RESPONSIVO: CELULAR ========== */
 @media only screen and (max-width: 768px) {
   html, body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
     width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
-  .container, .main, .section, .content, .wrapper {
+  .mobile-fix {
     padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-  }
-
-  header, main, footer {
-    padding-left: 16px;
-    padding-right: 16px;
-    text-align: left;
   }
 
   h1, h2, h3, p {
