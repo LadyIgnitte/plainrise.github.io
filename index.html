@@ -1,26 +1,89 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plainrise</title>
-  <link rel="icon" href="favicon.png" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ========== BASE GLOBAL ========== */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #0d1224;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    h1, h2, h3, p {
+      margin: 0 0 20px 0;
+      line-height: 1.4;
+    }
+
+    button {
+      padding: 14px 24px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(to right, #3a61ff, #74f2ce);
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(58, 97, 255, 0.4);
+    }
+
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: none;
+      width: 100%;
+      margin-bottom: 12px;
+    }
+
+    /* ========== RESPONSIVO: CELULAR ========== */
+    @media only screen and (max-width: 768px) {
+      html, body {
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .mobile-fix {
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+      }
+
+      h1, h2, h3, p {
+        word-wrap: break-word;
+        hyphens: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <h1>Cansado de estar cercado por quem <span>não te impulsiona?</span></h1>
 
-    <div class="highlight-block">
-      <strong>Plainrise</strong>: uma comunidade exclusiva para quem quer crescer — de verdade.<br>
-      Conecte-se com quem pensa grande e constrói o futuro.
-    </div>
+  <div class="container mobile-fix">
 
-    <button class="cta-button" onclick="scrollToForm()">Quero entrar</button>
+    <header>
+      <h1>Cansado de estar cercado por quem <span style="color:#74f2ce">não te impulsiona?</span></h1>
+      <p><strong>Plainrise:</strong> uma comunidade exclusiva para quem quer crescer — de verdade.<br>Conecte-se com quem pensa grande e constrói o futuro.</p>
+      <button>Quero entrar</button>
+    </header>
 
-    <hr class="section-divider">
-
-    <section class="benefits">
+    <main>
       <h2>Por que entrar na Plainrise?</h2>
       <ul>
         <li>Conexões inteligentes com pessoas que somam</li>
@@ -29,53 +92,46 @@
         <li>Oportunidades reais de crescimento e negócio</li>
         <li>Suporte e visibilidade dentro da comunidade</li>
       </ul>
-    </section>
 
-    <hr class="section-divider">
+      <blockquote>
+        <em>“Eu achava que já tinha visto de tudo… até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”</em><br>
+        — <strong>Lucas M., Empreendedor Serial</strong>
+      </blockquote>
 
-    <div class="testimonial">
-      “Eu achava que já tinha visto de tudo… até conhecer a Plainrise. Aqui é onde as portas milionárias realmente se abrem.”<br> 
-      – <strong>Lucas M., Empreendedor Serial</strong>
-    </div>
+      <p>⚡ Faltam 13 vagas</p>
+      <p>⚡ Formulário aberto por <strong>tempo limitado</strong>. Garanta seu lugar agora.</p>
 
-    <hr class="section-divider">
+      <form>
+        <label>Nome completo<br />
+          <input type="text" placeholder="Seu nome" required />
+        </label><br />
 
-    <div class="timer">⚡ Faltam <span id="countdown">15</span> vagas</div>
-    <div class="urgency">⚡ Formulário aberto por tempo limitado. Garanta seu lugar agora.</div>
+        <label>E-mail<br />
+          <input type="email" placeholder="Seu melhor e-mail" required />
+        </label><br />
 
-    <form id="lead-form" action="https://getform.io/f/bwmwekka" method="POST" class="form" onsubmit="validateForm(event)">
-      <div>
-        <label for="nome">Nome completo</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
-      </div>
-      <div>
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required />
-      </div>
-      <div>
-        <label for="atuacao">Área de atuação</label>
-        <input type="text" id="atuacao" name="atuacao" placeholder="Ex: Marketing, Direito, Tecnologia" required />
-      </div>
-      <div>
-        <label for="objetivo">O que você busca na Plainrise?</label>
-        <input type="text" id="objetivo" name="objetivo" placeholder="Networking, crescimento, visibilidade..." required />
-      </div>
-      <div>
-        <label for="mensalidade">Quanto você estaria disposto a pagar por mês?</label>
-        <select id="mensalidade" name="mensalidade" required>
-          <option value="" disabled selected>Selecione uma opção</option>
-          <option value="19">R$19</option>
-          <option value="39">R$39</option>
-          <option value="59">R$59</option>
-          <option value="99">R$99</option>
-          <option value="149">R$149</option>
-          <option value="249">R$249</option>
-        </select>
-      </div>
-      <button type="submit">Quero entrar</button>
-      <div id="form-error" class="error-message" style="display:none">Por favor, preencha todos os campos antes de enviar.</div>
-    </form>
-  </main>
-  <script src="script.js"></script>
+        <label>Área de atuação<br />
+          <input type="text" placeholder="Ex: Marketing, Direito, Tecno" required />
+        </label><br />
+
+        <label>O que você busca na Plainrise?<br />
+          <input type="text" placeholder="Networking, crescimento, visibilidade..." required />
+        </label><br />
+
+        <label>Quanto você estaria disposto a pagar por mês?<br />
+          <select required>
+            <option disabled selected>Selecione uma opção</option>
+            <option>R$50</option>
+            <option>R$100</option>
+            <option>R$200+</option>
+          </select>
+        </label><br />
+
+        <button type="submit">Quero entrar</button>
+      </form>
+    </main>
+
+  </div>
+
 </body>
 </html>
