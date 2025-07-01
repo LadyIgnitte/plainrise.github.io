@@ -80,3 +80,18 @@ strong {
     padding: 10px;
   }
 }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+}
